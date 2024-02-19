@@ -4,7 +4,7 @@ some basic c++ snippets
 
 ## hello world
 
-```
+```cpp
 #include <iostream>
 
 int main()
@@ -16,7 +16,7 @@ int main()
 
 ## functions
 
-```
+```cpp
 #include <iostream>
 
 bool is_even_bool(int number){
@@ -34,3 +34,11 @@ int main(){
 ```
 
 function call will implicitly cast input to defined argument type.
+
+## Standard Constants
+
+```cpp
+auto saved = true;
+auto active = false;
+std::shared_ptr<char> buffer = nullptr;
+```
