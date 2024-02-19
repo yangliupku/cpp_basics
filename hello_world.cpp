@@ -1,10 +1,3 @@
-# cpp_basics
-
-some basic c++ snippets
-
-## hello world
-
-```
 #include <iostream>
 
 int main()
@@ -12,4 +5,3 @@ int main()
     std::cout << "hello world" << std::endl;
     return 0;
 }
-```
