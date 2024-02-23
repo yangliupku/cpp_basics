@@ -14,7 +14,7 @@ int main()
 }
 ```
 
-## functions
+## Functions
 
 ```cpp
 #include <iostream>
@@ -66,4 +66,30 @@ std::cout << std::hex << (0xf0 & 0x0f) << std::endl; // 0x00 bitwise and
 std::cout << std::hex << (0xf0 | 0x0f) << std::endl; // 0xff bitwise or
 std::cout << std::hex << (0xf1 ^ 0xf0) << std::endl; // 0x01 xor
 std::cout << std::hex << (~0xf0f0f0f0) << std::endl; // 0x0f0f0f complement
+```
+
+## Variable scope
+
+```cpp
+auto foo = 1;
+{
+    auto foo = 2;
+    std::cout << foo << std::endl;  // 2
+}
+std::cout << foo << std::endl;  //1
+```
+
+## Reference
+
+```cpp
+void foo(int &input)
+{
+    input += 1;
+}
+void bar(const int &input)
+{
+    std::cout << input << std::endl;
+    // input += 1;
+    // ^ compiler error. can't modify var
+}
 ```
